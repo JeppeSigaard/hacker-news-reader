@@ -31,9 +31,7 @@ export const StoryDescriptionList: FunctionComponent<{
         <Alarm className="!size-4" />
         <span className="sr-only sm:not-sr-only ">Posted</span>
       </dt>
-      <dd className="font-semibold">
-        {relativeDateTime(new Date(props.story.time * 1000))}
-      </dd>
+      <dd className="font-semibold">{relativeDateTime(props.story.time)}</dd>
     </dl>
   );
 };

@@ -51,7 +51,8 @@ export function absoluteTime(date: Date) {
   return `${h}:${m}`;
 }
 
-export function relativeDateTime(date: Date, now: Date = new Date()) {
+export function relativeDateTime(input: number, now: Date = new Date()) {
+  const date = new Date(input * 1000);
   const diff: number = getDaysDiff(date, now);
   const time = absoluteTime(date);
 

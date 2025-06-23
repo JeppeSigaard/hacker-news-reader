@@ -25,9 +25,7 @@ export const UserDescriptionList: FunctionComponent<{
         <Alarm className="!size-4" />
         <span className="sr-only sm:not-sr-only ">Created</span>
       </dt>
-      <dd className="font-semibold">
-        {relativeDateTime(new Date(props.user.created * 1000))}
-      </dd>
+      <dd className="font-semibold">{relativeDateTime(props.user.created)}</dd>
     </dl>
   );
 };

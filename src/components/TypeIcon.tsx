@@ -7,7 +7,7 @@ export const TypeIcon: FunctionComponent<{
   type: Story['type'];
   classNames?: string;
 }> = (props) => {
-  const iconClasses = '!size-8 text-gray-400';
+  const iconClasses = '!size-7 text-gray-600 mr-1';
   return props.type === 'story' ? (
     <MenuBook className={iconClasses} />
   ) : (

@@ -1,8 +1,8 @@
+import { FunctionComponent } from 'react';
 import { Link } from 'react-router';
 import { Story } from '@/types';
-import { FunctionComponent } from 'react';
-import { TypeIcon } from '@/components';
-import { StoryDescriptionList } from './StoryDescriptionList';
+import { TypeIcon, StoryDescriptionList } from '@/components';
+import { getHostnameFromUrlString } from '@/utils';
 
 export const StoryPreview: FunctionComponent<{ story: Story }> = (props) => {
   return (
@@ -11,11 +11,11 @@ export const StoryPreview: FunctionComponent<{ story: Story }> = (props) => {
         <header className="flex items-start justify-start gap-3 w-full">
           <TypeIcon type={props.story.type} />
           <hgroup className="block">
-            <h3 className="text-lg font-bold line-clamp-2 leading-5">
+            <h3 className="text-lg font-bold line-clamp-2 leading-6">
               {props.story.title}
             </h3>
             <p className="text-gray-500 text-sm line-clamp-1 break-all">
-              {props.story.url}
+              {getHostnameFromUrlString(props.story.url)}
             </p>
           </hgroup>
         </header>
