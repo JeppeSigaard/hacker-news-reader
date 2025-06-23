@@ -1,10 +1,15 @@
-import { AuthorCard, StoryDescriptionList } from '@/components';
+import {
+  AuthorCard,
+  StoryDescriptionList,
+  SuspenseFallBack,
+} from '@/components';
 import { Story } from '@/types';
-import { FunctionComponent, use } from 'react';
-import { Link } from 'react-router';
+import { FunctionComponent, Suspense, use } from 'react';
+import { Link, useParams } from 'react-router';
 import LinkIcon from '@mui/icons-material/LinkTwoTone';
+import { useStories } from '@/hooks';
 
-export const StoryDetail: FunctionComponent<{
+const StoryDetailView: FunctionComponent<{
   storyPromise: Promise<Story | null>;
 }> = (props) => {
   const story = use(props.storyPromise);
@@ -56,5 +61,20 @@ export const StoryDetail: FunctionComponent<{
         <AuthorCard userSlug={story.by} />
       </footer>
     </article>
+  );
+};
+
+export const StoryDetail: FunctionComponent = () => {
+  const { storyId } = useParams();
+  const { getStory } = useStories();
+
+  if (!storyId) {
+    return null;
+  }
+
+  return (
+    <Suspense fallback={<SuspenseFallBack className="h-60" />}>
+      <StoryDetailView storyPromise={getStory(storyId)} />
+    </Suspense>
   );
 };
