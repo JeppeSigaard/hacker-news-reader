@@ -19,7 +19,7 @@ export const StoryDetail: FunctionComponent<{
         </header>
         <main>
           <p>
-            We could not find the artice you're looking for. Try refreshing the
+            We could not find the article you're looking for. Try refreshing the
             page or go back to{' '}
             <Link to="/" className="underline">
               the stories overview
