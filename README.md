@@ -4,7 +4,7 @@ Basic React app for displaying stories from the Hacker news Api, using Vite, Exp
 
 https://github.com/user-attachments/assets/f789d755-0f16-47a9-acd2-536b038222c5
 
-To run the project, clone it to your home directory and run:
+To run the project, clone it to your machine and run:
 
 ```Shell
 npm i
