@@ -3,7 +3,7 @@ import { useStories } from '@/hooks';
 import { StoryPreview, SuspenseFallBack } from '.';
 import { Story } from '@/types';
 
-export const StoryPreviewListView: FunctionComponent<{
+const StoryPreviewListView: FunctionComponent<{
   storiesPromise: Promise<Story[]>;
 }> = (props) => {
   const stories = use(props.storiesPromise);

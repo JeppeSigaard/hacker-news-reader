@@ -33,18 +33,24 @@ export const StoryDetail: FunctionComponent<{
   return (
     <article className="py-4">
       <header className="border-b border-b-gray-200 pb-3">
-        <h1 className="text-3xl sm:text-5xl font-bold">{story.title}</h1>
+        <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-4">
+          {story.title}
+        </h1>
         <StoryDescriptionList story={story} />
       </header>
       <main className="grid gap-4 py-4 border-b border-b-gray-200">
-        {!!story.text && <p>{story.text}</p>}
-        <Link
-          to={story.url}
-          className="p-3 border border-gray-300 rounded-xl flex gap-2 items-center"
-        >
-          <LinkIcon className="rotate-45 !size-6" />
-          <span className="line-clamp-1 break-all">{story.url}</span>
-        </Link>
+        {!!story.text && (
+          <section dangerouslySetInnerHTML={{ __html: story.text }} />
+        )}
+        {!!story.url && (
+          <Link
+            to={story.url}
+            className="p-3 border border-gray-300 rounded-xl flex gap-2 items-center"
+          >
+            <LinkIcon className="rotate-45 !size-6" />
+            <span className="line-clamp-1 break-all">{story.url}</span>
+          </Link>
+        )}
       </main>
       <footer>
         <AuthorCard userSlug={story.by} />
