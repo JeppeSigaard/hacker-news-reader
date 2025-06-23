@@ -1,6 +1,6 @@
-import { Story, User } from '@/types';
 import { FunctionComponent, Suspense, use } from 'react';
 import Face from '@mui/icons-material/Face';
+import { Story, User } from '@/types';
 import { useStories } from '@/hooks';
 import { SuspenseFallBack, UserDescriptionList } from '@/components';
 

@@ -1,10 +1,9 @@
 import { FunctionComponent, Suspense, use } from 'react';
 import { useParams } from 'react-router';
 import { useStories } from '@/hooks';
-import { SuspenseFallBack } from '@/components';
-import { StoryView } from '.';
+import { StoryDetail, SuspenseFallBack } from '@/components';
 
-export const StoryPage: FunctionComponent = () => {
+export const Story: FunctionComponent = () => {
   const { storyId } = useParams();
   const { getStory } = useStories();
 
@@ -14,7 +13,7 @@ export const StoryPage: FunctionComponent = () => {
 
   return (
     <Suspense fallback={<SuspenseFallBack className="h-60" />}>
-      <StoryView storyPromise={getStory(storyId)} />
+      <StoryDetail storyPromise={getStory(storyId)} />
     </Suspense>
   );
 };

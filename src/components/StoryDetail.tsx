@@ -4,7 +4,7 @@ import { FunctionComponent, use } from 'react';
 import { Link } from 'react-router';
 import LinkIcon from '@mui/icons-material/LinkTwoTone';
 
-export const StoryView: FunctionComponent<{
+export const StoryDetail: FunctionComponent<{
   storyPromise: Promise<Story | null>;
 }> = (props) => {
   const story = use(props.storyPromise);
