@@ -20,7 +20,7 @@ export const StoryPreview: FunctionComponent<{ story: Story }> = (props) => {
           </hgroup>
         </header>
         <footer>
-          <StoryDescriptionList story={props.story} className="pl-9" />
+          <StoryDescriptionList story={props.story} className="pl-10" />
         </footer>
       </article>
     </Link>
