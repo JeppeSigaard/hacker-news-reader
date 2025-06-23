@@ -9,7 +9,7 @@ export const AppHeader: FunctionComponent = () => {
 
   return (
     <Link to="/">
-      <header className="h-15 flex items-center gap-4 border-b border-b-gray-200">
+      <header className="h-15 flex items-center gap-4 border-b border-b-gray-200 sticky top-0 bg-white">
         {!!storyId ? (
           <BackArrow className="!size-7" />
         ) : (

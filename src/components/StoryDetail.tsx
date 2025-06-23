@@ -38,7 +38,7 @@ export const StoryDetail: FunctionComponent<{
         </h1>
         <StoryDescriptionList story={story} />
       </header>
-      <main className="grid gap-4 py-4 border-b border-b-gray-200">
+      <main className="grid gap-4 py-4 border-b border-b-gray-200 overflow-hidden break-all">
         {!!story.text && (
           <section dangerouslySetInnerHTML={{ __html: story.text }} />
         )}

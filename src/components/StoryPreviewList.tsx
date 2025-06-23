@@ -9,7 +9,7 @@ const StoryPreviewListView: FunctionComponent<{
   const stories = use(props.storiesPromise);
 
   return (
-    <ol>
+    <ol className="overflow-hidden break-all">
       {stories.map((story) => (
         <li key={story.id}>
           <StoryPreview story={story} />
