@@ -1,5 +1,5 @@
 import { FunctionComponent, Suspense, use } from 'react';
-import { useStories } from '@/client/StoryProvider';
+import { useStories } from '@/hooks';
 import { SuspenseFallBack } from '@/components';
 import { HomePageView } from './';
 

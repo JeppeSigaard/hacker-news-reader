@@ -1,6 +1,6 @@
 import { FunctionComponent, Suspense, use } from 'react';
 import { useParams } from 'react-router';
-import { useStories } from '@/client/StoryProvider';
+import { useStories } from '@/hooks';
 import { SuspenseFallBack } from '@/components';
 import { StoryView } from '.';
 
