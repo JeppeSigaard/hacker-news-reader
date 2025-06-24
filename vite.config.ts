@@ -4,5 +4,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), react(), tailwindcss()],
+  plugins: [
+    tsconfigPaths(),
+    react({ babel: { plugins: ['babel-plugin-react-compiler'] } }),
+    tailwindcss(),
+  ],
 });

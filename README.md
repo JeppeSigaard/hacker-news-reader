@@ -16,6 +16,7 @@ npm start
 - The project uses Vite and Tailwind for swift prototyping.
 - The project includes an API proxy written in express. The proxy uses in-memory cache for balancing load against the hacker news API, and reshapes the incoming data for use in this app.
 - The projects experiments with leveraging React's Suspense spec and the use() hook for data fetching on the client.
+- The project showcases the React Compiler release candidate
 
 #### How to advance
 

@@ -8,7 +8,7 @@ export type Story = {
   title: string;
   text?: string;
   type: 'story' | 'job';
-  url: string;
+  url?: string;
 };
 
 export type User = {

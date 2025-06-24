@@ -14,9 +14,11 @@ export const StoryPreview: FunctionComponent<{ story: Story }> = (props) => {
             <h3 className="text-lg font-bold line-clamp-2 leading-6">
               {props.story.title}
             </h3>
-            <p className="text-gray-500 text-sm line-clamp-1 break-all">
-              {getHostnameFromUrlString(props.story.url)}
-            </p>
+            {!!props.story.url && (
+              <p className="text-gray-500 text-sm line-clamp-1 break-all">
+                {getHostnameFromUrlString(props.story.url)}
+              </p>
+            )}
           </hgroup>
         </header>
         <footer>
